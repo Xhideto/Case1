@@ -7,18 +7,23 @@
 #include <list>
 #include "user.h"
 
+//Registration Function
 void Registerr::rgstion()
 {
+    //Regex and bool variables for password
     bool upper, lower, digit, special;
     bool done = false;
     std::regex upper_case("[A-Z]+");
     std::regex lower_case("[a-z]+");
     std::regex digit_case("[0-9]+");
     std::regex special_case("[!@#$%^&*()_+{}|:<>?]+");
+    //string variables
     std::string lname, fname, uname, phone, email, pass;
 
+    //output stream to write data to a file
     std::ofstream UFile("UserFiles.txt");
     User user;
+    //list container for saving a users file
     std::list<User> users;
     if(!UFile)
     {
@@ -26,6 +31,7 @@ void Registerr::rgstion()
     }
     else
     {
+        //user object
         user.lname = lname;
         user.fname = fname;
         user.uname = uname;
@@ -33,6 +39,7 @@ void Registerr::rgstion()
         user.email = email;
         user.pass = pass;
 
+        //get inputs and assign to user object
         std::cout << "Fill in your information:" << std::endl;
         std::cout << "Last Name: ";
         std::cin >> user.lname;
@@ -49,6 +56,9 @@ void Registerr::rgstion()
         std::cout << "Email Address: ";
         std::cin >> user.email;
         std::cout << std::endl;
+
+        //Using regex function for password
+        // Don't know how to hide passwords when inputting as '*'
         do
         {
             std::cout << "Password: ";
@@ -88,10 +98,12 @@ void Registerr::rgstion()
                 std::cout << "Passwords do not match." << std::endl;
             }
         }
+        //push user to users list
         users.push_back(user);
-
+        //for loop std::list to a file
         for(auto user: users)
         {
+            //getting inputs to a file
             UFile << user.lname << "," << user.fname << "," << user.uname << "," << user.phone << "," << user.email << "," << user.pass << std::endl;
         }
 

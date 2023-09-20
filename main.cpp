@@ -7,6 +7,7 @@ int main()
     int choice;
     Registerr reg;
 
+    //Main Menu
     do{
         std::cout << "\t\t   HOTEL" << std::endl;
         std::cout << "\t\t1. Register" << std::endl;
@@ -18,7 +19,7 @@ int main()
         switch (choice)
         {
             case 1:
-                /* code */
+                //Registration
                 reg.rgstion();
                 break;
 
@@ -27,7 +28,6 @@ int main()
 
             case 3:
                 std::cout << "\t\tThank you for visiting the hotel" << std::endl;
-                /* code */
                 break;
 
             default:
