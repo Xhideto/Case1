@@ -21,16 +21,10 @@ void Registerr::rgstion()
     std::string lname, fname, uname, phone, email, pass;
 
     //output stream to write data to a file
-    std::ofstream UFile("UserFiles.txt");
+    std::ofstream UFile("UserFiles.txt", std::ios::app);
     User user;
     //list container for saving a users file
     std::list<User> users;
-    if(!UFile)
-    {
-        std::cout << "failed" << std::endl;
-    }
-    else
-    {
         //user object
         user.lname = lname;
         user.fname = fname;
@@ -108,6 +102,5 @@ void Registerr::rgstion()
         }
 
         std::cout << "Registered" << std::endl;
-    }
 
 }

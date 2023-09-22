@@ -30,5 +30,10 @@ public:
     void rgstion();
 };
 
+class Login
+{
+
+};
+
 
 #endif //CASE_USER_H
