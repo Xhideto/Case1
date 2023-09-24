@@ -1,5 +1,5 @@
 //
-// Created by Kujo Jotaro on 17/09/2023.
+// header file
 //
 
 #ifndef CASE_USER_H
@@ -32,7 +32,9 @@ public:
 
 class Login
 {
-
+public:
+    Login() {}
+    void login();
 };
 
 

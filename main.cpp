@@ -6,6 +6,7 @@ int main()
 {
     int choice;
     Registerr reg;
+    Login log;
 
     //Main Menu
     do{
@@ -25,6 +26,7 @@ int main()
 
             case 2:
                 //login
+                log.login();
                 break;
 
             case 3:

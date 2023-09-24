@@ -1,2 +1,1 @@
-TEST_test2,tets,aishdiushadfgsd,asdfgsfg132423453465,@gmailc.pm,ANYoansd_23
-Kazama,Kiryu,DojimanoRyu,091312345678,Ryu@gmail.com,Dragon_69
+Kazuma, Kiryu, 098765432112, kiryuryu@kamurocho.com,
