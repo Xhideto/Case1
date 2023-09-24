@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(oppai main.cpp
         user.cpp
-        user.h)
+        user.h
+        Ulogin.cpp)
