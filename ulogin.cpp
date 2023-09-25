@@ -1,6 +1,6 @@
 //
-// It cannot retrieve the user's information
-//
+// Stiil Trying
+//Will continue tomorrow
 
 #include <iostream>
 #include <fstream>
@@ -10,32 +10,29 @@
 void Login::login()
 {
     std::string uname, username, password, pass;
-    if (std::ifstream ULogin{"UserLog.txt", std::ios::in}) {
+    system("cls");
+    User login;
+    //
+    login.uname = uname;
+    login.pass = pass;
 
-        User login;
-        //
-        std::list<User> logins;
-        //
-        login.uname = uname;
-        login.pass = pass;
-
-        std::cout << "\t\t-----LOG IN-----" << std::endl;
-        std::cout << "\t\tUsername" << std::endl;
-        std::cin >> username;
-        std::cout << std::endl;
-        std::cout << "\t\tPassword" << std::endl;
-        std::cin >> password;
-
+    std::cout << "\t\t-----LOG IN-----" << std::endl;
+    std::cout << "\t\tUsername" << std::endl;
+    std::cin >> username;
+    std::cout << std::endl;
+    std::cout << "\t\tPassword" << std::endl;
+    std::cin >> password;
+    if (std::ifstream ULogin{"UserLog.txt", std::ios::in})
+    {
         while (ULogin >> login.uname >> login.pass) {
-            if (username == login.uname && password == login.pass) {
+            if (login.uname == username && login.pass == password) {
                 std::string fname, lname, phone, email;
-                if (std::ifstream Uuser{"UserFiles", std::ios::in}) {
-
-                    login.lname = lname;
-                    login.fname = fname;
-                    login.phone = phone;
-                    login.email = email;
-
+                login.lname = lname;
+                login.fname = fname;
+                login.phone = phone;
+                login.email = email;
+                if (std::ifstream Uuser{"UserFiles", std::ios::in})
+                {
                     while (Uuser >> login.lname >> login.fname >> login.phone >> login.pass) {
 
                         std::cout << "\t\tSuccessfully Login" << std::endl;
