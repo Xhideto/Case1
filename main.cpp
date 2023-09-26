@@ -21,11 +21,13 @@ int main()
         {
             case 1:
                 //Registration
+                system("cls");
                 reg.rgstion();
                 break;
 
             case 2:
                 //login
+                system("cls");
                 log.login();
                 break;
 

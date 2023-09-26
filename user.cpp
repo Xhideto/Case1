@@ -99,8 +99,8 @@ void Registerr::rgstion()
         for(auto user: users)
         {
             //getting inputs to a file
-            UFile << user.lname << ", " << user.fname  << ", " << user.phone << ", " << user.email << ", " << std::endl;
-            LogFile << user.uname << ", " << user.pass << std::endl;
+            UFile << user.lname << " " << user.fname  << " " << user.phone << " " << user.email << " " << std::endl;
+            LogFile << user.uname << " " << user.pass << std::endl;
         }
 
         std::cout << "Registered" << std::endl;

@@ -1,1 +1,2 @@
-Kazuma, Kiryu, 098765432112, kiryuryu@kamurocho.com,
+Kazuma Kiryu 098765432112 kiryuryu@kamurocho.com
+Goro Majima 091234567887 majima@kamurocho.com 
