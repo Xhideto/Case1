@@ -7,12 +7,10 @@
 #include "user.h"
 
 void Login::login() {
-    std::string uname, pass, username, password;
-
-    if (std::ifstream ULogin{"UserLog.txt", std::ios::in}) {
+    std::string username, password;
 
         User login;
-
+        //get inputs and assign to user object
         std::cout << "\t\t-----LOG IN-----" << std::endl;
         std::cout << "\t\tUsername" << std::endl;
         std::cin >> username;
@@ -23,21 +21,15 @@ void Login::login() {
 
         bool found = false;
 
-        while (ULogin >> login.uname >> login.pass) {
-            // File input to read the user's information
+    // File input to read the user's information
+        std::ifstream ULogin("UserFiles.txt");
+        while (ULogin >> login.uname >> login.pass >> login.lname >> login.fname >> login.phone >> login.email) {
             if (username == login.uname && password == login.pass) {
+                std::cout << "\t\tSuccessfully Login" << std::endl;
+                std::cout << "Name: " << login.lname << ", " << login.fname << std::endl;
+                std::cout << "Phone Number: " << login.phone << std::endl;
+                std::cout << "Email Address: " << login.email << std::endl;
                 found = true;
-                std::ifstream Uuser("UserFiles.txt", std::ios::in);
-
-                std::string fname, lname, phone, email;
-
-                while (Uuser >> lname >> fname >> phone >> email) {
-                    std::cout << "\t\tSuccessfully Login" << std::endl;
-                    std::cout << "Name: " << lname << ", " << fname << std::endl;
-                    std::cout << "Phone Number: " << phone << std::endl;
-                    std::cout << "Email Address: " << email << std::endl;
-                }
-                Uuser.close();
                 break;
             }
         }
@@ -45,9 +37,5 @@ void Login::login() {
         if (!found) {
             std::cout << "\t\tCheck again your username & password" << std::endl;
         }
-
         ULogin.close();
-    } else {
-        std::cout << "\t\tFile not found" << std::endl;
     }
-}

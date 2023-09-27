@@ -21,7 +21,6 @@ void Registerr::rgstion()
 
     //output stream to write data to a file
     std::ofstream UFile("UserFiles.txt", std::ios::app);
-    std::ofstream LogFile("UserLog.txt", std::ios::app);
     User user;
     //list container for saving a users file
     std::list<User> users;
@@ -98,8 +97,7 @@ void Registerr::rgstion()
         for(auto user: users)
         {
             //getting inputs to a file
-            UFile << user.lname << " " << user.fname  << " " << user.phone << " " << user.email << " " << std::endl;
-            LogFile << user.uname << " " << user.pass << std::endl;
+            UFile << user.uname << " " << user.pass << " " << user.lname << " " << user.fname  << " " << user.phone << " " << user.email << " " << std::endl;
         }
 
         std::cout << "Registered" << std::endl;
