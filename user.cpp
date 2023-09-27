@@ -1,4 +1,4 @@
-//
+//registration function
 
 #include <iostream>
 #include <fstream>

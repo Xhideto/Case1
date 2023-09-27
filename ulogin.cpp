@@ -1,6 +1,5 @@
 // Last Modified: 9/26/23
 //Might add password tries and lockout?
-//PROBLEM: When logging in, it reads the other user's information
 
 #include <iostream>
 #include <fstream>
