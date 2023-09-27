@@ -1,7 +1,6 @@
 #include <iostream>
 #include "user.h"
 
-
 int main()
 {
     int choice;
